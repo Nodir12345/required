@@ -19,17 +19,17 @@ export function Form(){
         <>
            <form onSubmit={handleSubmit}>
                <div>
-                   <input placeholder="First Name" onChange={e=>setFirstName(e.target.value)} />
+                   <input placeholder=" Name" onChange={e=>setFirstName(e.target.value)} />
                </div>
-               {error&&firstName.length<=0?
-               <label>1chi imputni to'ldiring</label>:""}
+               {error&&firstName.length<=5?
+               <label>5tadan ko'p text kiriting</label>:""}
                <div>
-                   <input placeholder="Last Name" onChange={e=>setLastName(e.target.value)} />
+                   <input type="number" placeholder="Phone" onChange={e=>setLastName(e.target.value)} />
                </div>
-               {error&&lastName.length<=0?
-               <label>2chi imputni to'ldiring</label>:""}
+               {error&&lastName.length<=7?
+               <label>7tadan ko'p son kiriting</label>:""}
                <div>
-                   <button>
+                   <button >
                        Submit
                    </button>
                </div>
